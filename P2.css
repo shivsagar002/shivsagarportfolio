@@ -278,11 +278,11 @@ button:hover{
 @media (min-width:750px){
     #cv{
         margin-bottom: 10px;
-        width: 160px;
+        width: 170px;
         display: inline-block;
     }
     #efgh{
-        width: 160px;
+        width: 170px;
         display: inline-block;
     }
 }
@@ -301,11 +301,11 @@ button:hover{
     }
     #cv{
         margin-bottom: 10px;
-        width: 160px;
+        width: 170px;
         display: inline-block;
     }
     #efgh{
-        width: 160px;
+        width: 170px;
         display: inline-block;
     }
     @keyframes typing{
@@ -332,10 +332,10 @@ button:hover{
     }
     #cv{
         margin-bottom: 10px;
-        width: 160px;
+        width: 170px;
     }
     #efgh{
-        width: 160px;
+        width: 170px;
     }
     #check:checked ~ ul{
         display: flex;
