@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     overflow-x: hidden;
 }
@@ -71,18 +74,23 @@ section label i{
 }
 .fa-bars{
     background-color: #0082e6;
+    /* display: none; */
+}
+.fa-xmark{
+    background-color: #0082e6;
+    display: none;
+    /* margin-right: 5px; */
 }
 #s-nav ul{
     background-color: #112d42;
-    width: 50vw;
+    width: 70vw;
     height: calc(100vh - 50px);
     position: absolute;
-    right: -50vw;
+    right: -70vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: none;
-
 }
 #s-nav ul li{
     list-style: none;
@@ -275,6 +283,171 @@ button:hover{
 #contact-me:hover{
     box-shadow: 0 4px 8px 0 rgba(225,225,225, 0.2), 0 6px 20px 0 rgba(225,225,225, 0.19);
 }
+#my-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(black,#112d42,#112d42);
+}
+#my-skills a{
+    color: red;
+    margin: 10px 0;
+}
+#my-skills p{
+    margin-top: 30px;
+    font-size: x-large;
+    color: white;
+    font-weight: 600;
+}
+.my-skills{
+    display: flex;
+    flex-direction: row;
+}
+.about-skills{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: left;
+}
+.about-skills h4{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+#rm-text{
+    display: none;
+}
+.about-skills label{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    /* width: max-content; */
+}
+.fa-solid{
+    color: white;
+}
+
+.fa-angle-up{
+    display: none;
+}
+#check2{
+    display: none;
+}
+#check2:checked ~ #rm-text{
+    display: flex;
+}
+#check2:checked ~ label .fa-angle-down{
+    display: none;
+}
+#check2:checked ~ label .fa-angle-up{
+    display: flex;
+}
+.d-gf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.u{
+    display: flex;
+    min-width: 50vw;
+    height: 50px;
+    border-radius: 10px;
+    background-image: linear-gradient(#0082e6, #0004e6,#0004e6);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.u a{
+    margin-bottom: 30px;
+    margin-left: 10px;
+    color: whhite;
+}
+.u p{
+    font-size: small;
+    color: aqua;
+    margin-bottom: 20px;
+}
+.u .i{
+    margin-left: 10px;
+    width: 80%;
+    position: relative;
+    float: right;
+    border: 1px solid white;
+    background-color: #e494878a;
+    border-radius: 20px;
+    height: 30%;
+}
+.u .i .fill{
+    background-image: linear-gradient(135deg,rgba(0, 0, 0, 0.616),rgb(0, 0,0));
+    border-radius: 30px;
+    height: 100%;
+}
+.fill1{
+    width: 95%;
+    animation: fill1 3s ease-out 1 ;
+}
+.fill2{
+    width: 95%;
+    animation: fill2 3s ease-out 1 ;
+}
+.fill3{
+    width: 70%;
+    animation: fill3 3s ease-out 1 ;
+}
+.fill4{
+    width: 85%;
+    animation: fill4 3s ease-out 1 ;
+}
+.fill5{
+    width: 70%;
+    animation: fill5 3s ease-out 1 ;
+}
+.fill6{
+    width: 90%;
+    animation: fill6 3s ease-out 1 ;
+}
+.d-gf:nth-child(2) .i .fill{
+    animation: fill2 3s ease-out 1;
+}
+@keyframes fill1 {
+    from{width: 0;}
+    to{width:95%;}
+}
+@keyframes fill2 {
+    from{width: 0;}
+    to{width:95%;}
+}
+@keyframes fill3 {
+    from{width: 0;}
+    to{width:70%;}
+}
+@keyframes fill4 {
+    from{width: 0;}
+    to{width:85%;}
+}
+@keyframes fill5 {
+    from{width: 0;}
+    to{width:70%;}
+}
+@keyframes fill6 {
+    from{width: 0;}
+    to{width:90%;}
+}
+#black{
+    display: none;
+    position: fixed;
+    top: 10;
+    margin-top: -50px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.726);
+    z-index: 100;
+}
 @media (min-width:750px){
     #cv{
         margin-bottom: 10px;
@@ -327,8 +500,14 @@ button:hover{
     .fa-bars{
         z-index: 1002;
     }
-    #check:checked ~ .fa-bars{
-        z-index: -200;
+    #check:checked ~ label .fa-bars{
+        display: none;
+    }
+    #check:checked ~ label .fa-xmark{
+        display: flex;
+    }
+    #check:checked ~ #black{
+        display: flex;
     }
     #cv{
         margin-bottom: 10px;
@@ -341,10 +520,24 @@ button:hover{
         display: flex;
         z-index: 1000;
         right: 0;
-        transition: all 1s ease-in;
         position: fixed;
         top: 50px;
+        transition: tran 5s ease-in-out 1;
     }
+    @keyframes tran{
+        from{right:-70vw;}
+        to{right:0vw;}
+    }
+    .my-skills{
+        flex-direction: column;
+    }
+    .about-skills{
+        margin-left: 7vw;
+    }
+    .u{
+        width: 80%;
+    }
+    
 }
 @media (max-width:420px){
     #container .button{
