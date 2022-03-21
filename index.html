@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d0f94f2411.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="P2.ico" type="image/x-icon">
+    <link rel="script" href="P2.js">
     <link rel="stylesheet" href="P2.css">
     <title>Shiv-portfolio</title>
 </head>
@@ -21,7 +22,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#b">About</a></li>
             <li><a href="#my-skills">Skills</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact">Contact me</a></li>
         </ul>
     </header>
 
@@ -36,7 +37,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#b">About</a></li>
             <li><a href="#my-skills">Skills</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact">Contact me</a></li>
         </ul>
     </section>
     <div class="container">
@@ -60,10 +61,13 @@
                         <li><span>Learner</span></li>
                     </center>
                 </ul>
+                <div class="d-introb">
+                    <center>Developer</center>
+                </div>
             </div>
             <div class="button">
                 <center><a href="myCV.pdf" target="_blank"><button id="cv">Download CV</button></a>
-                    <a href=""><button id="efgh">About me</button></a>
+                    <a href="#b"><button id="efgh">About me</button></a>
                 </center>
             </div>
         </div>
@@ -95,12 +99,12 @@
                             <a>24×7</a>
                         </div>
                     </div>
-                    <div class="am-i-content">
+                    <div class="am-i-content" style="text-align: justify;">
                         Frontend developer, I create web pages with UI / UX user interface, I have a year of experience
                         and many clients are happy with the project carried out.
                     </div>
                     <div class="button">
-                        <a href=""><button id="contact-me">Contact me</button></a>
+                        <a href="#contact"><button id="contact-me">Contact me</button></a>
                     </div>
                 </div>
             </div><br><br>
@@ -113,8 +117,8 @@
                 <div class="about-skills">
                     <h4 style="font-size: large;">My Creative Skills & Experience.</h4>
                     <input type="checkbox" name="check2" id="check2">
-                    <p style="font-size: large;color: aqua;font-family: Arial, Helvetica, sans-serif;">I am a Web Developer have good hand in HTML, CSS, JavaScript, Bootstrap & Wordpress. I had completed 10+ projects and gain new ideas and lot's of problem solving skills.</p>
-                    <p style="font-size: large;color: aqua;font-family: Arial, Helvetica, sans-serif;" id="rm-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, officia magnam? Cupiditate placeat vitae odio voluptate quia illo similique libero!</p>
+                    <p style="font-size: large;color: aqua;font-family: Arial, Helvetica, sans-serif; text-align: justify;">I am a Web Developer have good hand in HTML, CSS, JavaScript, Bootstrap & Wordpress. I had completed 10+ projects and gain new ideas and lot's of problem solving skills.</p>
+                    <p style="font-size: large;color: aqua;font-family: Arial, Helvetica, sans-serif; text-align: justify;" id="rm-text">I can make any type of website and Currently i am working on JavaScript & Python to strong my roots and for effecient results in future.</p>
                     <label for="check2">
                         <i class="fa-solid fa-angle-down"></i>
                         <i class="fa-solid fa-angle-up"></i>
@@ -122,52 +126,116 @@
                 </div>
                 <div class="d-gf">
                     <div class="u">
-                        <p id="para">HTML</p>
+                        <div class="u-text">
+                            <a style="color: white;">HTML</a>
+                            <a style="color: white;">95%</a>
+                        </div>
                         <div class="i">
                             <div class="fill fill1"></div>
                         </div>
-                        <a style="color: white;">95%</a>
                     </div>
                     <div class="u">
-                        <p>CSS</p>
+                        <div class="u-text">
+                            <a style="color: white;">CSS</a>
+                            <a style="color: white;">89%</a>
+                        </div>
                         <div class="i">
                             <div class="fill fill2"></div>
                         </div>
-                        <a style="color: white;">95%</a>
                     </div>
                     <div class="u">
-                        <p>JavaScript</p>
+                        <div class="u-text">
+                            <a style="color: white;">JavaScript</a>
+                            <a style="color: white;">60%</a>
+                        </div>
                         <div class="i">
                             <div class="fill fill3"></div>
                         </div>
-                        <a style="color: white;">70%</a>
                     </div>
                     <div class="u">
-                        <p>Bootstrap</p>
+                        <div class="u-text">
+                            <a style="color: white;">Bootstrap</a>
+                            <a style="color: white;">85%</a>
+                        </div>
                         <div class="i">
                             <div class="fill fill4"></div>
                         </div>
-                        <a style="color: white;">85%</a>
                     </div>
                     <div class="u">
-                        <p>Wordpress</p>
+                        <div class="u-text">
+                            <a style="color: white;">Wordpress</a>
+                            <a style="color: white;">70%</a>
+                        </div>
                         <div class="i">
                             <div class="fill fill5"></div>
                         </div>
-                        <a style="color: white;">70%</a>
                     </div>
                     <div class="u">
-                        <p>C</p>
+                        <div class="u-text">
+                            <a style="color: white;">C</a>
+                            <a style="color: white;">80%</a>
+                        </div>
                         <div class="i">
                             <div class="fill fill6"></div>
                         </div>
-                        <a style="color: white;">90%</a>
                     </div>
                 </div>
+            </div><br>
+        </div><hr>
+        <div id="contact">
+            <p>Contact Me</p>
+            <a>– Get in Touch –</a>
+            <div class="contact">
+                <div class="ttm">
+                    <span>Talk to me</span>
+                    <div class="contact-box">
+                        <i class="fa-solid fa-envelope" style="color: white;"></i>
+                        <a href="mailto: bcashivsagar@gmail.com" style="color: #fff; margin:10px 0 0 0;">Email</a>
+                        <a href="mailto: bcashivsagar@gmail.com" style="color: aqua; margin:10px 0 0 0;">Bcashivsagar@gmail.com</a>
+                        <a href="mailto: bcashivsagar@gmail.com" style="color: aqua; margin:10px 0 0 0;">Write me →</a>
+                    </div>
+                    <div class="contact-box">
+                        <i class="fa-brands fa-whatsapp" ></i>
+                        <a href="http://wa.me/918750771201?text=Hello" style="color: #fff; margin:10px 0 0 0;">WhatsApp</a>
+                        <a href="http://wa.me/918750771201?text=Hello" style="color: aqua; margin:10px 0 0 0;">91-8750771201</a>
+                        <a href="http://wa.me/918750771201?text=Hello" style="color: aqua; margin:10px 0 0 0;">Write me →</a>
+                    </div>
+                    <div class="contact-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:918750771201" style="color: #fff; margin:10px 0 0 0;">Call</a>
+                        <a href="tel:918750771201" style="color: aqua; margin:10px 0 0 0;">91-8750771201</a>
+                        <a href="tel:918750771201" style="color: aqua; margin:10px 0 0 0;">Call me →</a>
+                    </div>   
+                </div>
+                <div class="wyp">
+                    <span>Write me your project</span>
+                    <form action="#">
+                        <div class="cbox">
+                            <input type="text" id="cboxa" placeholder="Input your name" required>
+                            <b>Name</b>
+                        </div>
+                        <div class="cbox">
+                            <input type="email" id="cboxa" placeholder="Input your email" required>
+                            <b>Email</b>
+                        </div>
+                        <div class="cbox">
+                            <textarea type="textarea" id="cboxb" placeholder="Write your project" required></textarea>
+                            <b>Project</b>
+                        </div>
+                        <input type="submit" value="Send" id="csubmit">
+                    </form>
+                </div><br>
             </div>
         </div>
-    </div>
-    
+    </div><hr>
+    <footer>
+        <p> &copy; 2022 Shiv sagar</p>
+        <div>
+            <a href="mailto: bcashivsagar@gmail.com"><i class="fa-solid fa-envelope" style="color: white;"></i></a>
+            <a href="http://wa.me/918750771201?text=Hello"><i class="fa-brands fa-whatsapp" style="font-size: large;"></i></a>
+            <a href="tel:918750771201"><i class="fa-solid fa-phone"></i></a>
+        </div>
+    </footer>   
 </body>
 
 </html>

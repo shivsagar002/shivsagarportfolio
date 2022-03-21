@@ -1,1 +1,3 @@
-alert("Hellow World");
+function showAlert() {
+    alert("Your Message Received.");
+}

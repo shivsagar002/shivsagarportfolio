@@ -142,6 +142,7 @@ section label i{
 .intro{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .s-intro{
     font-size: 30px;
@@ -183,6 +184,16 @@ section label i{
     100%{
         left: 0px;
     }
+}
+.d-introb{
+    color: #fa2b0b;
+    font-weight: bold;
+    font-size: 8vw;
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+    width: 100%;
+    margin-left: 10%;
 }
 .button{
     display: flex;
@@ -352,20 +363,21 @@ button:hover{
 }
 .u{
     display: flex;
+    flex-direction: column;
     min-width: 50vw;
     height: 50px;
     border-radius: 10px;
     background-image: linear-gradient(#0082e6, #0004e6,#0004e6);
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 0px;
     margin-bottom: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.u a{
-    margin-bottom: 30px;
-    margin-left: 10px;
-    color: whhite;
+.u .u-text{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
 }
 .u p{
     font-size: small;
@@ -374,6 +386,8 @@ button:hover{
 }
 .u .i{
     margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: 10px;
     width: 80%;
     position: relative;
     float: right;
@@ -389,54 +403,51 @@ button:hover{
 }
 .fill1{
     width: 95%;
-    animation: fill1 3s ease-out 1 ;
+    animation: filla 3s ease-out 1 ;
 }
 .fill2{
-    width: 95%;
-    animation: fill2 3s ease-out 1 ;
+    width: 89%;
+    animation: fillb 3s ease-out 1 ;
 }
 .fill3{
-    width: 70%;
-    animation: fill3 3s ease-out 1 ;
+    width: 60%;
+    animation: fillc 3s ease-out 1 ;
 }
 .fill4{
     width: 85%;
-    animation: fill4 3s ease-out 1 ;
+    animation: filld 3s ease-out 1 ;
 }
 .fill5{
     width: 70%;
-    animation: fill5 3s ease-out 1 ;
+    animation: fille 3s ease-out 1 ;
 }
 .fill6{
-    width: 90%;
-    animation: fill6 3s ease-out 1 ;
+    width: 80%;
+    animation: fillf 3s ease-out 1 ;
 }
-.d-gf:nth-child(2) .i .fill{
-    animation: fill2 3s ease-out 1;
-}
-@keyframes fill1 {
+@keyframes filla {
     from{width: 0;}
     to{width:95%;}
 }
-@keyframes fill2 {
+@keyframes fillb {
     from{width: 0;}
-    to{width:95%;}
+    to{width:89%;}
 }
-@keyframes fill3 {
+@keyframes fillc {
     from{width: 0;}
-    to{width:70%;}
+    to{width:60%;}
 }
-@keyframes fill4 {
+@keyframes filld {
     from{width: 0;}
     to{width:85%;}
 }
-@keyframes fill5 {
+@keyframes fille {
     from{width: 0;}
     to{width:70%;}
 }
-@keyframes fill6 {
+@keyframes fillf {
     from{width: 0;}
-    to{width:90%;}
+    to{width:80%;}
 }
 #black{
     display: none;
@@ -447,6 +458,137 @@ button:hover{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.726);
     z-index: 100;
+}
+#contact{
+    background-image: linear-gradient(#112d42,#112d42);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+}
+#contact a{
+    color: red;
+    margin: 10px 0;
+}
+#contact p{
+    margin-top: 30px;
+    font-size: x-large;
+    color: white;
+    font-weight: 600;
+}
+.contact{
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    /* align-items: center; */
+}
+.ttm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 38vw;
+}
+.ttm span{
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.253);
+    padding:10px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+}
+.contact-box:hover{
+    background-color: black;
+}
+.contact-box i{
+    font-size: x-large;
+}
+.contact-box a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    margin: -20px 0;
+}
+.fa-whatsapp{
+    color: white;
+    font-size: xx-large;
+}
+.wyp span{
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+.wyp form{
+    margin-top: 20px;
+}
+#cboxa{
+    border-radius: 6px;
+    height: 30px;
+    width: 38vw;
+    border: 2px solid rgba(0, 255, 255, 0.61);
+    background-color: #112d42;
+    color: aqua;
+    padding: 0 20px;
+}
+.cbox{
+    margin: 0 0 20px 20px;
+}
+.cbox b{
+    color: rgba(0, 255, 255, 0.61);
+    background-color: #112d42;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    position:absolute;
+    margin: -3px -40vw;
+    padding: 0 3px;
+}
+#cboxb{
+    border-radius: 6px;
+    height: 100px;
+    width: 38vw;
+    border: 2px solid rgba(0, 255, 255, 0.61);
+    background-color: #112d42;
+    color: aqua;
+    padding: 10px 20px;
+    text-align: justify;
+}
+#csubmit{
+    padding: 4px 20px;
+    background-color: #112d42;
+    color: rgba(0, 255, 255, 0.61);
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 255, 255, 0.61);
+}
+#csubmit:hover{
+    background-color: rgba(0, 255, 255, 0.61);
+    color: #112d42;
+}
+footer{
+    width: 100vw;
+    padding: 10px;
+    background-image: linear-gradient(#112d42,#000,#000,#000);
+    display: flex;
+    flex-direction: column;
+}
+footer p{
+    color: white;
+    margin-bottom: 10px;
+}
+footer div a{
+    margin: 0 8px;
 }
 @media (min-width:750px){
     #cv{
@@ -537,7 +679,27 @@ button:hover{
     .u{
         width: 80%;
     }
-    
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ttm{
+        margin: 30px;
+    }
+    #cboxa{
+        width: 70vw;
+    }
+    #cboxb{
+        width: 70vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .cbox b{
+        margin: -3px -70vw;   
+    }
+    #csubmit{
+        display: block;
+        margin-left: 10vw;
+    }
 }
 @media (max-width:420px){
     #container .button{
@@ -549,6 +711,14 @@ button:hover{
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    #cv{
+        width: 40vw;
+        font-size: x-small;
+    }
+    #efgh{
+        width: 40vw;
+        font-size: x-small;
     }
     .am-c-content{
         flex-direction: column;
