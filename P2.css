@@ -577,7 +577,7 @@ button:hover{
     color: #112d42;
 }
 footer{
-    width: 100vw;
+    width: calc(100vw-20px);
     padding: 10px;
     background-image: linear-gradient(#112d42,#000,#000,#000);
     display: flex;
