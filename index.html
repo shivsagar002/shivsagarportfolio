@@ -211,19 +211,20 @@
                 </div>
                 <div class="wyp">
                     <span>Write me your project</span>
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="submit-to-google-sheet">
                         <div class="cbox">
-                            <input type="text" id="cboxa" placeholder="Input your name" required>
+                            <input type="text" id="cboxa" placeholder="Input your name" name="Name" required>
                             <b>Name</b>
                         </div>
                         <div class="cbox">
-                            <input type="email" id="cboxa" placeholder="Input your email" required>
+                            <input type="email" id="cboxa" placeholder="Input your email" name="Email" required>
                             <b>Email</b>
                         </div>
                         <div class="cbox">
-                            <textarea type="textarea" id="cboxb" placeholder="Write your project" required></textarea>
-                            <b>Project</b>
+                            <textarea type="textarea" id="cboxb" placeholder="Your Message Here..." name="Message" required></textarea>
+                            <b>Message</b>
                         </div>
+                        <div id="submitmsg"></div>
                         <input type="submit" value="Send" id="csubmit">
                     </form>
                 </div><br>
@@ -238,7 +239,26 @@
             <a href="http://wa.me/918750771201?text=Hello"><i class="fa-brands fa-whatsapp" style="font-size: large;"></i></a>
             <a href="tel:918750771201"><i class="fa-solid fa-phone"></i></a>
         </div>
-    </footer>   
+    </footer>  
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVpYLUMzSVisKBq9HFNZX0k0CqKjQ-X-MeBf7_8-CMm7kDi7Jk3i41t5AfZuUzCVIi/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => 
+                msg.innerHTML= "Your Response is Submitted!!!",
+                setTimeout(() => {
+                    msg.innerHTML = ""
+                }, 5000)
+                )
+                form.reset()
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 
 </html>

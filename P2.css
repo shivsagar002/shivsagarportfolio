@@ -563,6 +563,11 @@ button:hover{
     padding: 10px 20px;
     text-align: justify;
 }
+#submitmsg{
+    color: greenyellow;
+    font-size: 13px;
+    margin: -10px 0 10px;
+}
 #csubmit{
     padding: 4px 20px;
     background-color: #112d42;
